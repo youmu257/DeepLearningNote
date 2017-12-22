@@ -5,9 +5,11 @@
 
         pip3 install h5py
 
-* 如果有出現 "Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2" 這個警告的話，表示你的電腦有GPU，可以加入以下程式來關閉 CPU only。  
+* 如果有出現 "Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2" 這個警告的話，表示使用基本的 tensorflow 編譯版本，所以沒有支援AVX、AVX2。如果你有GPU可以不用管這個警告，但如果想關閉這個警告的話可以加入以下這行在程式中   
 
         os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+    但如果你只有CPU的話，你需要重新編譯 tensorflow 去最佳化 CPU版本的支援。[參考](https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u?rq=1)
 
 1. 決定輸入的維度，也就是 feature 的數量  
 
@@ -211,7 +213,7 @@ Callback function
                                  validation_split=0.1, callbacks=[
                                     earlyStopping, lossHistory, checkpoint])
 
-Refreence
+Reference
 ==
-1. [參考 手把手教你深度學習實務](https://www.slideshare.net/tw_dsconf/ss-83976998)
+1. [手把手教你深度學習實務](https://www.slideshare.net/tw_dsconf/ss-83976998)
 2. [Keras Document](https://keras.io/callbacks/)
