@@ -217,3 +217,5 @@ Reference
 ==
 1. [手把手教你深度學習實務](https://www.slideshare.net/tw_dsconf/ss-83976998)
 2. [Keras Document](https://keras.io/callbacks/)
+3. [李宏毅 / 一天搞懂深度學習](https://www.slideshare.net/tw_dsconf/ss-62245351)
+4. [一天搞懂深度學習 心得筆記](https://ihower.tw/blog/archives/8574)
